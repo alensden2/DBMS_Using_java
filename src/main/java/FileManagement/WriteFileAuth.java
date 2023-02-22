@@ -29,6 +29,7 @@ public class WriteFileAuth {
                 throw new RuntimeException(e);
             }
             System.out.println("Successfully wrote to the file.");
+            System.out.println("");
         } catch (Exception e) {
             System.out.println(e);
         }

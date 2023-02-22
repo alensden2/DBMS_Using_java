@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9db2f9aa-4d92-41b1-adf7-54f0651c0864" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileManagement/ReadFileAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileManagement/ReadFileAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileManagement/WriteFileAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileManagement/WriteFileAuth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/UserRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/UserRegistration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +82,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/UserLoginRegistration/UserRegistration.java</url>
-          <line>24</line>
+          <line>25</line>
           <properties class="UserLoginRegistration.UserRegistration" method="writeUserDetailsToFile">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

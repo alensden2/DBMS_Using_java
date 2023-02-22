@@ -2,6 +2,7 @@ package UserLoginRegistration;
 
 import FileManagement.ReadFileAuth;
 import FileManagement.WriteFileAuth;
+import LandingPage.LandingPage;
 
 public class UserRegistration {
     /**
@@ -26,6 +27,14 @@ public class UserRegistration {
         //if user already exists then dont add the user
         if (readFileAuth.checkIfUserExists(username) != true) {
             writeFileAuth.writeUserAuthData(username, hashedPassword);
+            LandingPage landingPage = new LandingPage();
+            landingPage.landingPage();
+        }
+        else {
+            System.out.println("User exists! Please try again.");
+            System.out.println("");
+            LandingPage landingPage = new LandingPage();
+            landingPage.landingPage();
         }
         // else write to auth file
     }
