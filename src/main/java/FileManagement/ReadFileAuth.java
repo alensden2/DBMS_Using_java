@@ -39,4 +39,5 @@ public class ReadFileAuth {
     public boolean checkIfUserExists(String username) {
         return fileContent.contains(username);
     }
+
 }

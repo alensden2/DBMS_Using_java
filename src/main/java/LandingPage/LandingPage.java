@@ -1,11 +1,13 @@
 package LandingPage;
 
+import UserLoginRegistration.Login;
 import UserLoginRegistration.UserRegistration;
 
 import java.util.Scanner;
 
 public class LandingPage {
-    public void landingPage(){
+
+    public void landingPage() {
         int userSelection;
         System.out.println("Database Management system");
         System.out.println();
@@ -15,44 +17,56 @@ public class LandingPage {
 
         // taking the input from the user -
 
-        Scanner s =  new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         userSelection = s.nextInt();
-        if (userSelection>3 && userSelection<0){
+        if (userSelection > 3 && userSelection < 0) {
             incorectInput();
         }
-        if(userSelection == 1){
+        if (userSelection == 1) {
             getLoginComponent();
         }
-        if (userSelection == 2){
+        if (userSelection == 2) {
             getUserRegistrationComponent();
         }
     }
 
     /**
      * Gets the login module if the user exists
-     * */
-    public void getLoginComponent(){
+     */
+    public void getLoginComponent() {
         System.out.println("Redirecting to Login Module ...");
-    }
-
-    /**
-     * Gets the new registration module if the user does not exists
-     * */
-    public void getUserRegistrationComponent(){
-        System.out.println("Redirecting to User Registration Module ...");
         System.out.println("Please enter the credentials : ");
         System.out.println();
-        UserRegistration userRegistration = new UserRegistration();
-        Scanner s =  new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         System.out.println("Username : ");
         String username = s.nextLine();
         System.out.println("Password : ");
         String password = s.nextLine();
-        userRegistration.createNewUser(username,password);
+        Login login = new Login(username, password);
+        login.storeUserDetails();
     }
 
-    public int incorectInput(){
+    /**
+     * Gets the new registration module if the user does not exists
+     */
+    public void getUserRegistrationComponent() {
+        System.out.println("Redirecting to User Registration Module ...");
+        System.out.println("Please enter the credentials : ");
+        System.out.println();
+        UserRegistration userRegistration = new UserRegistration();
+        Scanner s = new Scanner(System.in);
+        System.out.println("Username : ");
+        String username = s.nextLine();
+        System.out.println("Password : ");
+        String password = s.nextLine();
+        System.out.println("Hint Question : ");
+        String question = s.nextLine();
+        System.out.println("Answer : ");
+        String answer = s.nextLine();
+        userRegistration.createNewUser(username, password, question, answer);
+    }
+
+    public int incorectInput() {
         return 0;
     }
-
 }
