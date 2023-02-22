@@ -8,7 +8,7 @@ public class WriteFileAuth {
         try {
             FileWriter myWriter = null;
             try {
-                myWriter = new FileWriter("src/main/java/Assets/userAuth.txt");
+                myWriter = new FileWriter("src/main/java/Assets/userAuth.txt", true);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -17,6 +17,7 @@ public class WriteFileAuth {
                 myWriter.write(":");
                 myWriter.write(password);
                 myWriter.write(";");
+                myWriter.write("\n");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
