@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class WriteFileAuth {
+
     public void writeUserAuthData(String username, String password){
         try {
             FileWriter myWriter = null;
@@ -14,8 +15,9 @@ public class WriteFileAuth {
             }
             try {
                 myWriter.write(username);
-                myWriter.write(":");
+                myWriter.write("\n");
                 myWriter.write(password);
+                myWriter.write("\n");
                 myWriter.write(";");
                 myWriter.write("\n");
             } catch (IOException e) {
