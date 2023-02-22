@@ -1,5 +1,7 @@
 package LandingPage;
 
+import UserLoginRegistration.UserRegistration;
+
 import java.util.Scanner;
 
 public class LandingPage {
@@ -38,7 +40,15 @@ public class LandingPage {
      * */
     public void getUserRegistrationComponent(){
         System.out.println("Redirecting to User Registration Module ...");
-
+        System.out.println("Please enter the credentials : ");
+        System.out.println();
+        UserRegistration userRegistration = new UserRegistration();
+        Scanner s =  new Scanner(System.in);
+        System.out.println("Username : ");
+        String username = s.nextLine();
+        System.out.println("Password : ");
+        String password = s.nextLine();
+        userRegistration.createNewUser(username,password);
     }
 
     public int incorectInput(){
