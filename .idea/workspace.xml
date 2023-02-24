@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9db2f9aa-4d92-41b1-adf7-54f0651c0864" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Dto/UserAuthenticationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/AdminConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileManagement/ReadFileAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileManagement/ReadFileAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileManagement/WriteFileAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileManagement/WriteFileAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dto/UserAuthenticationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dto/UserAuthenticationDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LandingPage/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LandingPage/LandingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/UserRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/UserRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,9 +88,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/UserLoginRegistration/Login.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="22" />
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/AdminConsole.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

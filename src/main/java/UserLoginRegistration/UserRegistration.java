@@ -8,8 +8,13 @@ public class UserRegistration {
   /**
    * Creates new user
    */
-  ReadFileAuth readFileAuth = new ReadFileAuth();
-  WriteFileAuth writeFileAuth = new WriteFileAuth();
+  ReadFileAuth readFileAuth;
+  WriteFileAuth writeFileAuth;
+
+  public UserRegistration() {
+    readFileAuth = new ReadFileAuth();
+    writeFileAuth = new WriteFileAuth();
+  }
 
   /**
    *

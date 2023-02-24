@@ -43,7 +43,22 @@ public class LandingPage {
         System.out.println("Password : ");
         String password = s.nextLine();
         Login login = new Login(username, password);
+
+        // stores the user details in the list obj after fetching from the txt file
         login.storeUserDetails();
+
+        // capture current user details for user Auth -
+        login.captureCurrentUserDetails();
+
+        // check for auth status -
+        // 1. if the current user dto empty - no user exits with that name
+        // 2. if data there but hashed password wont match - incorrect password
+        boolean firstAuth = login.checkUserAuthStatus();
+
+        // for second factor authentication
+
+        login.secondFactorAuthentication(firstAuth);
+
     }
 
     /**
