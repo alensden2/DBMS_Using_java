@@ -35,4 +35,11 @@ public class QueryCleaner {
     public String getTableName(){
         return this.tableName;
     }
+
+    public String queryDecomposer(String sqlQuery){
+        List<String> decomposedQuery = new ArrayList<>();
+        sqlQuery = sqlQuery.replace(";","");
+        decomposedQuery = List.of(sqlQuery.split(" "));
+        return decomposedQuery.get(3);
+    }
 }

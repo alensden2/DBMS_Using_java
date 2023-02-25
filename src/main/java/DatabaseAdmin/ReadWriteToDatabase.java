@@ -3,6 +3,8 @@ package DatabaseAdmin;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -123,5 +125,19 @@ public class ReadWriteToDatabase {
 
         return true;
 
+    }
+
+    public String selectTable(String directoryOfTable){
+        String tableContent = null;
+        File file = new File(directoryOfTable);
+        Path filePath = Path.of(directoryOfTable);
+
+        try {
+            tableContent = Files.readString(filePath);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return tableContent;
     }
 }

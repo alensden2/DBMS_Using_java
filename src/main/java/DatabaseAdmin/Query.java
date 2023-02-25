@@ -174,4 +174,41 @@ public class Query {
             adminConsole.AdminTEMP();
         }
     }
+
+    public void SelectTable(String sqlCommand, String username) {
+        // creating a table
+        /** CHANGEEEE
+         * eg select * from <Table_Name>
+         * */
+        String tableName;
+        List<String> columnName = new ArrayList<>();
+        List<String> columnDefinition = new ArrayList<>();
+        ReadWriteToDatabase readWriteToDatabase = new ReadWriteToDatabase();
+        if (currentUsedDatabase != null) {
+            QueryCleaner queryCleaner= new QueryCleaner();
+            String nameOfTable = queryCleaner.queryDecomposer(sqlCommand);
+            String userTableDir = currentUsedDatabase + "/" + nameOfTable + ".txt";
+            String tableContent = readWriteToDatabase.selectTable(userTableDir);
+            // reading from database
+            for (int i =0; i<tableContent.length(); i++){
+
+                if(tableContent.charAt(i) == '-'){
+                    // print a single space to separate columns
+                    System.out.print("   ");
+                }
+                if(tableContent.charAt(i) == ';'){
+                    System.out.println("");
+                }
+                System.out.print(tableContent.charAt(i));
+            }
+            //
+            AdminConsole adminConsole = new AdminConsole(username);
+            adminConsole.AdminTEMP();
+
+        } else {
+            System.out.println("Please Create/Use Database ...");
+            AdminConsole adminConsole = new AdminConsole(username);
+            adminConsole.AdminTEMP();
+        }
+    }
 }
