@@ -12,7 +12,12 @@ public class AdminConsole {
     }
 
     public void AdminTEMP() {
-        System.out.println("SQL Shell running ...");
+        System.out.println("........... ALEN SQL Shell running ..........");
+        System.out.println("this shell is whitespace sensitive ...");
+        System.out.println("To create a new Database -> Eg : \'create database NAME_OF_DATABASE;\'");
+        System.out.println("To use a existing Database -> Eg : \'use database NAME_OF_DATABASE;\'");
+        System.out.println("To create a new table -> Eg : \'create table orders ( item_id int, orderDate varchar );\' NOTE - All the columns are dynamic. Eg : don't use varchar(23)");
+        System.out.println("........... Please execute query below ..........");
         Scanner s = new Scanner(System.in);
         String currentSqlCommand = s.nextLine();
         findSqlCodeKeyWord(currentSqlCommand);

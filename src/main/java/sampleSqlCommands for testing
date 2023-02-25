@@ -1,0 +1,9 @@
+
+// creation of Db for a user : admin
+create database test;
+
+// use database ani
+use database test;
+
+//creation of table
+create table student ( studentName Varchar, studentrollno int, studentID varchar, Address varchar );
