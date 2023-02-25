@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db2f9aa-4d92-41b1-adf7-54f0651c0864" name="Changes" comment="" />
+    <list default="true" id="9db2f9aa-4d92-41b1-adf7-54f0651c0864" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/AdminConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/AdminConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserLoginRegistration/Login.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,14 +85,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/AdminConsole.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/Query.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="36" />
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/Query.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/Query.java</url>
+          <line>28</line>
+          <properties class="DatabaseAdmin.Query" method="createDatabase">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

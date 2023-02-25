@@ -90,6 +90,8 @@ public class Login {
                 System.out.println("Login Success!");
                 // redirect to admin console
                 AdminConsole adminConsole = new AdminConsole(username);
+                createDirectoryForUser(username);
+                System.out.println("Hi " + username + " welcome to AlenSQL...");
                 adminConsole.AdminTEMP();
                 return true;
             } else {
@@ -113,6 +115,16 @@ public class Login {
         }
         else {
             return false;
+        }
+    }
+    public void createDirectoryForUser(String username){
+        String directory = "src/main/java/Assets/"+username;
+        File userDirectory = new File(directory);
+        if(userDirectory.isDirectory()){
+            // directory already exists.
+        } else {
+            // create new user specific directory.
+            new File(directory).mkdirs();
         }
     }
 }
