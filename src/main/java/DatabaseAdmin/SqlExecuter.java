@@ -46,6 +46,9 @@ public class SqlExecuter {
             case "use":
                 query.useQuery(sqlCommand,username);
                 break;
+            case "insert":
+                query.insertIntoTable(sqlCommand,username);
+                break;
             default:
                 System.out.println("Please Enter a valid command");
         }

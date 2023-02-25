@@ -16,7 +16,8 @@ public class AdminConsole {
         System.out.println("this shell is whitespace sensitive ...");
         System.out.println("To create a new Database -> Eg : \'create database NAME_OF_DATABASE;\'");
         System.out.println("To use a existing Database -> Eg : \'use database NAME_OF_DATABASE;\'");
-        System.out.println("To create a new table -> Eg : \'create table orders ( item_id int, orderDate varchar );\' NOTE - All the columns are dynamic. Eg : don't use varchar(23)");
+        System.out.println("To create a new table -> Eg : \'create table orders ( item_id int, orderDate varchar, nameOfOrder varchar, orderValue int );\' NOTE - All the columns are dynamic. Eg : don't use varchar(23)");
+        System.out.println("To insert into a table -> Eg : \'insert into orders values ( 1234, 23-oct-2023, Alen-order, $34000 );\' NOTE - All the columns are dynamic. Eg : don't use \" \" for varchar ");
         System.out.println("........... Please execute query below ..........");
         Scanner s = new Scanner(System.in);
         String currentSqlCommand = s.nextLine();

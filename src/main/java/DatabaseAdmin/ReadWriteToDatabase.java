@@ -77,4 +77,51 @@ public class ReadWriteToDatabase {
         return true;
 
     }
+
+    public boolean insertIntoTableFromQuery(String tableName, List<String> decomposedQuery, String username, String currentUsedDatabase) {
+        /**
+         * Creates the table and table schema
+         * inside the user dir and the current database dir
+         * */
+        String userDatabase = currentUsedDatabase;
+        String userTableDir = userDatabase + "/" + tableName + ".txt";
+        File valueFile = new File(userTableDir);
+
+        if (!valueFile.exists()) {
+            System.out.println("Table does not exist ...");
+        } else {
+            //table exists
+            // writing to the table txt
+            FileWriter myWriterSchema = null;
+            try {
+                myWriterSchema = new FileWriter(userTableDir, true);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            for (int i = 0; i < decomposedQuery.size(); i++) {
+
+                try {
+                    myWriterSchema.write(decomposedQuery.get(i));
+                    myWriterSchema.write("-");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+
+            }
+            try {
+                myWriterSchema.write(";");
+                myWriterSchema.close();
+                System.out.println("Table created successfully ...");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            return false;
+        }
+
+
+
+        return true;
+
+    }
 }

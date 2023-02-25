@@ -125,4 +125,53 @@ public class Query {
         sqlCommandDecomposed = List.of(sqlCommand.split(" "));
         return sqlCommandDecomposed;
     }
+
+    public void insertIntoTable(String sqlCommand, String username) {
+        // creating a table
+        /** CHANGEEEE
+         * We create two text files in the username/user_database dir
+         * the first file contains all the values for the table
+         * The values are divides using '-' eg - alen-19-bike
+         * The second file is the schema that stores the following -
+         * the column definition
+         * the user logs - 1. date, 2. user-name
+         * file naming - table_name.txt & table_name_schema.txt
+         *
+         * Constraint -
+         * eg of the create table statement - space to be given after each parameter ( commas can be ignored )
+         * CREATE Table Orders ( item_id int, orderDate varchar )
+         * The varchar in this SQL is dynamic and does not require "()" -> will fail compilation if used
+         * */
+        String tableName;
+        List<String> columnName = new ArrayList<>();
+        List<String> columnDefinition = new ArrayList<>();
+        if (currentUsedDatabase != null) {
+            QueryCleaner queryCleaner= new QueryCleaner();
+            List<String> decomposedQuery = queryCleaner.queryDecomposer(sqlCommand,username);
+            List<String> decomposedQueryValues = new ArrayList<>();
+
+            /**
+             * Cleaning the value set
+             * */
+            for(int i=1; i<decomposedQuery.size(); i++){
+                decomposedQueryValues.add(decomposedQuery.get(i));
+            }
+            /**
+             * All the values are stored in the decomposed values
+             * */
+            ReadWriteToDatabase readWriteToDatabase = new ReadWriteToDatabase();
+            //
+
+            //
+            String nameOfTable = queryCleaner.getTableName();
+            readWriteToDatabase.insertIntoTableFromQuery(nameOfTable,decomposedQueryValues,username,currentUsedDatabase);
+            AdminConsole adminConsole = new AdminConsole(username);
+            adminConsole.AdminTEMP();
+
+        } else {
+            System.out.println("Please Create/Use Database ...");
+            AdminConsole adminConsole = new AdminConsole(username);
+            adminConsole.AdminTEMP();
+        }
+    }
 }

@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9db2f9aa-4d92-41b1-adf7-54f0651c0864" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/QueryCleaner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/ReadWriteToDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Assets/ani/ani/student.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Assets/ani/ani/student_Schema.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/AdminConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/AdminConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/ReadWriteToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/ReadWriteToDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +95,35 @@
           <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/ReadWriteToDatabase.java</url>
           <line>49</line>
           <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/Query.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/ReadWriteToDatabase.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/DatabaseAdmin/SqlExecuter.java</url>
+          <line>40</line>
+          <properties class="DatabaseAdmin.SqlExecuter" method="executeSqlQuery">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

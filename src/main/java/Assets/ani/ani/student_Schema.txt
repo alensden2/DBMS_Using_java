@@ -1,1 +1,0 @@
-studentName-Varchar-studentrollno-int-studentID-varchar-Address-varchar-DB_User-ani
