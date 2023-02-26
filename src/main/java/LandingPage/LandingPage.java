@@ -55,7 +55,11 @@ public class LandingPage {
   }
 
   /**
-   * Gets the login module if the user exists
+   * This is the login module, if the user already has registered they can login in using this
+   * This will prompt the user to enter the user details
+   * the user name and password. Once entered the user details is searched in the auth file.
+   * And the user is prompted with their security hint question to enable 2 factor authentication.
+   * Upon entering the correct detail the user is logged in
    */
   public void getLoginComponent() {
     System.out.println("Redirecting to Login Module ...");
@@ -66,6 +70,8 @@ public class LandingPage {
     String username = s.nextLine();
     System.out.println("Password : ");
     String password = s.nextLine();
+
+    // This class enables the entire login module
     Login login = new Login(username, password);
 
     // stores the user details in the list obj after fetching from the txt file
@@ -111,6 +117,10 @@ public class LandingPage {
     s.close();
   }
 
+  /**
+   * This is called if the user inputs a wrong input
+   * @return
+   */
   public int incorectInput() {
     return 0;
   }
