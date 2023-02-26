@@ -3,6 +3,19 @@ package UserLoginRegistration;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * This is a sample light weight database application
+ * That can have multiple users and can have multiple tables and database for each user
+ * The scope of the login exists beyond the execution of the program as the authentication
+ * Information is stored in the log file present at - src/main/java/Assets/userAuth.txt
+ * landing page is where the entire application is bootstrapped at.
+ *
+ * @author Alen John
+ * @version 1.0
+ * @since Feb 26, 2023
+ *
+ * @see Java Docs reference - "https://www.tutorialspoint.com/java/java_documentation.htm"
+ */
 public class PasswordHashing {
 
   /**
