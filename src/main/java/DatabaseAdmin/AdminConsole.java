@@ -12,6 +12,7 @@ public class AdminConsole {
     }
 
     public void AdminTEMP() {
+        System.out.println("^^^^^^^^^^^^^^ CONSOLE LOGS ^^^^^^^^^^^^^^");
         System.out.println("........... ALEN SQL Shell running ..........");
         System.out.println("this shell is whitespace sensitive ...");
         System.out.println("To create a new Database -> Eg : \'create database NAME_OF_DATABASE;\'");
@@ -19,6 +20,9 @@ public class AdminConsole {
         System.out.println("To create a new table -> Eg : \'create table orders ( item_id int, orderDate varchar, nameOfOrder varchar, orderValue int );\' NOTE - All the columns are dynamic. Eg : don't use varchar(23)");
         System.out.println("To read the table please use -> Eg : \'select * from orders;\'");
         System.out.println("To insert into a table -> Eg : \'insert into orders values ( 1234, 23/oct/2023, Alen-order, $34000 );\' NOTE - All the columns are dynamic. Eg : don't use \" \" for varchar ");
+        System.out.println("To update table -> Eg : \'update table orders ( 1234, 23/oct/2023, Alen-order, $34000 );\'");
+        System.out.println("To delete table -> Eg : \'delete table orders;\'");
+        System.out.println("........... CHECK EXECUTION LOGS LOGGED ABOVE ...........");
         System.out.println("........... Please execute query below ..........");
         Scanner s = new Scanner(System.in);
         String currentSqlCommand = s.nextLine();

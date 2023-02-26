@@ -52,6 +52,12 @@ public class SqlExecuter {
             case "select":
                 query.SelectTable(sqlCommand, username);
                 break;
+            case "update":
+                query.updateTable(sqlCommand, username);
+                break;
+            case "delete":
+                query.deleteTable(sqlCommand, username);
+                break;
             default:
                 System.out.println("Please Enter a valid command");
         }

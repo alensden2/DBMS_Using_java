@@ -21,7 +21,7 @@ public class Query {
             createDatabase(sqlCommand, username);
         } else if (sqlCommandDecomposed.contains("table")) {
             // create table executed
-            createTable(sqlCommand,username);
+            createTable(sqlCommand, username);
 
         } else {
             System.out.println("Syntax error please re-login ...");
@@ -100,14 +100,14 @@ public class Query {
         List<String> columnName = new ArrayList<>();
         List<String> columnDefinition = new ArrayList<>();
         if (currentUsedDatabase != null) {
-            QueryCleaner queryCleaner= new QueryCleaner();
-            List<String> decomposedQuery = queryCleaner.queryDecomposer(sqlCommand,username);
+            QueryCleaner queryCleaner = new QueryCleaner();
+            List<String> decomposedQuery = queryCleaner.queryDecomposer(sqlCommand, username);
             ReadWriteToDatabase readWriteToDatabase = new ReadWriteToDatabase();
             //
 
             //
             String nameOfTable = queryCleaner.getTableName();
-            readWriteToDatabase.createTableFromQuery(nameOfTable,decomposedQuery,username,currentUsedDatabase);
+            readWriteToDatabase.createTableFromQuery(nameOfTable, decomposedQuery, username, currentUsedDatabase);
             AdminConsole adminConsole = new AdminConsole(username);
             adminConsole.AdminTEMP();
 
@@ -118,10 +118,10 @@ public class Query {
         }
     }
 
-    public List<String> sqlCommandRefactor(String sqlCommand){
+    public List<String> sqlCommandRefactor(String sqlCommand) {
         sqlCommand = sqlCommand.toLowerCase();
         List<String> sqlCommandDecomposed = new ArrayList<>();
-        sqlCommand = sqlCommand.replace(";","");
+        sqlCommand = sqlCommand.replace(";", "");
         sqlCommandDecomposed = List.of(sqlCommand.split(" "));
         return sqlCommandDecomposed;
     }
@@ -146,14 +146,14 @@ public class Query {
         List<String> columnName = new ArrayList<>();
         List<String> columnDefinition = new ArrayList<>();
         if (currentUsedDatabase != null) {
-            QueryCleaner queryCleaner= new QueryCleaner();
-            List<String> decomposedQuery = queryCleaner.queryDecomposer(sqlCommand,username);
+            QueryCleaner queryCleaner = new QueryCleaner();
+            List<String> decomposedQuery = queryCleaner.queryDecomposer(sqlCommand, username);
             List<String> decomposedQueryValues = new ArrayList<>();
 
             /**
              * Cleaning the value set
              * */
-            for(int i=1; i<decomposedQuery.size(); i++){
+            for (int i = 1; i < decomposedQuery.size(); i++) {
                 decomposedQueryValues.add(decomposedQuery.get(i));
             }
             /**
@@ -164,7 +164,7 @@ public class Query {
 
             //
             String nameOfTable = queryCleaner.getTableName();
-            readWriteToDatabase.insertIntoTableFromQuery(nameOfTable,decomposedQueryValues,username,currentUsedDatabase);
+            readWriteToDatabase.insertIntoTableFromQuery(nameOfTable, decomposedQueryValues, username, currentUsedDatabase);
             AdminConsole adminConsole = new AdminConsole(username);
             adminConsole.AdminTEMP();
 
@@ -185,18 +185,18 @@ public class Query {
         List<String> columnDefinition = new ArrayList<>();
         ReadWriteToDatabase readWriteToDatabase = new ReadWriteToDatabase();
         if (currentUsedDatabase != null) {
-            QueryCleaner queryCleaner= new QueryCleaner();
+            QueryCleaner queryCleaner = new QueryCleaner();
             String nameOfTable = queryCleaner.queryDecomposer(sqlCommand);
             String userTableDir = currentUsedDatabase + "/" + nameOfTable + ".txt";
             String tableContent = readWriteToDatabase.selectTable(userTableDir);
             // reading from database
-            for (int i =0; i<tableContent.length(); i++){
+            for (int i = 0; i < tableContent.length(); i++) {
 
-                if(tableContent.charAt(i) == '-'){
+                if (tableContent.charAt(i) == '-') {
                     // print a single space to separate columns
                     System.out.print("   ");
                 }
-                if(tableContent.charAt(i) == ';'){
+                if (tableContent.charAt(i) == ';') {
                     System.out.println("");
                 }
                 System.out.print(tableContent.charAt(i));
@@ -211,4 +211,29 @@ public class Query {
             adminConsole.AdminTEMP();
         }
     }
+
+    public void updateTable(String sqlCommand, String username) {
+
+    }
+
+    public void deleteTable(String sqlCommand, String username) {
+        if (currentUsedDatabase != null) {
+            QueryCleaner queryCleaner = new QueryCleaner();
+            List<String> decomposedQuery = queryCleaner.queryDecomposer(sqlCommand, username);
+            ReadWriteToDatabase readWriteToDatabase = new ReadWriteToDatabase();
+            //
+
+            //
+            String nameOfTable = queryCleaner.getTableName();
+            readWriteToDatabase.deleteTableFromQuery(nameOfTable, decomposedQuery, username, currentUsedDatabase);
+            AdminConsole adminConsole = new AdminConsole(username);
+            adminConsole.AdminTEMP();
+
+        } else {
+            System.out.println("Please Create/Use Database ...");
+            AdminConsole adminConsole = new AdminConsole(username);
+            adminConsole.AdminTEMP();
+        }
+    }
 }
+

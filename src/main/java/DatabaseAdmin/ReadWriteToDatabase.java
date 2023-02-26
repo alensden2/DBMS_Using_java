@@ -140,4 +140,24 @@ public class ReadWriteToDatabase {
 
         return tableContent;
     }
+
+    public void deleteTableFromQuery(String tableName, List<String> decomposedQuery, String username, String currentUsedDatabase){
+        // cleaning the tableName
+
+        tableName = tableName.replace(";","");
+        String userDatabase = currentUsedDatabase;
+        String userTableDir = userDatabase + "/" + tableName + ".txt";
+        String userTableSchemaDir = userDatabase + "/" + tableName + "_Schema" + ".txt";
+        File valueFile = new File(userTableDir);
+        File metaValueFile = new File(userTableSchemaDir);
+        if (!valueFile.exists()) {
+            // table does not exists
+            System.out.println("Table does not exists!");
+        } else {
+            //table exists
+            valueFile.delete();
+            metaValueFile.delete();
+            System.out.println("Table deleted!");
+        }
+    }
 }
