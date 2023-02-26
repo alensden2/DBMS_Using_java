@@ -25,6 +25,16 @@ import java.util.List;
 
 public class ReadWriteToDatabase {
 
+  /**
+   * This function is used to create 2 tiles
+   * the schema that stores column definination and the user name
+   * the table txt file that stores the records seperated by "-" and ";"
+   * @param tableName the table name
+   * @param decomposedQuery the decomposed query
+   * @param username the username of the user
+   * @param currentUsedDatabase the current used database
+   * @return returns true if table is created
+   */
   public boolean createTableFromQuery(
     String tableName,
     List<String> decomposedQuery,
@@ -96,6 +106,14 @@ public class ReadWriteToDatabase {
     return true;
   }
 
+  /**
+   * This function adds records to the text file
+   * @param tableName the table name
+   * @param decomposedQuery the decomposed query
+   * @param username the username of the user
+   * @param currentUsedDatabase the current used database
+   * @return true or false depending on the operation
+   */
   public boolean insertIntoTableFromQuery(
     String tableName,
     List<String> decomposedQuery,
@@ -142,6 +160,11 @@ public class ReadWriteToDatabase {
     return true;
   }
 
+  /**
+   * This function returns the file content of the specified table
+   * @param directoryOfTable this is the directory of the txt file
+   * @return this contains the file content
+   */
   public String selectTable(String directoryOfTable) {
     String tableContent = null;
     File file = new File(directoryOfTable);
@@ -156,6 +179,13 @@ public class ReadWriteToDatabase {
     return tableContent;
   }
 
+  /**
+   * This function deletes the table.
+   * @param tableName the table name
+   * @param decomposedQuery the decomposed query
+   * @param username the username of the user
+   * @param currentUsedDatabase the current used database
+   */
   public void deleteTableFromQuery(
     String tableName,
     List<String> decomposedQuery,

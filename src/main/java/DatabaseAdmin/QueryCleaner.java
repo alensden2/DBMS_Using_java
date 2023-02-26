@@ -20,6 +20,12 @@ import java.util.List;
 public class QueryCleaner {
   String tableName;
 
+  /**
+   * This function decomposes the sql query string
+   * @param sqlQuery this is the sql query
+   * @param username username
+   * @return returns the list of decomposed columns.
+   */
   public List<String> queryDecomposer(String sqlQuery, String username) {
     sqlQuery = sqlQuery.replace("(", "");
     sqlQuery = sqlQuery.replace(")", "");
@@ -46,10 +52,19 @@ public class QueryCleaner {
     return decomposedQueryTempColumns;
   }
 
+  /**
+   * This is a getter function to get the table name
+   * @return the table name
+   */
   public String getTableName() {
     return this.tableName;
   }
 
+  /**
+   * This function takes the decomposed sql string and cleans it for further processing
+   * @param sqlQuery
+   * @return
+   */
   public String queryDecomposer(String sqlQuery) {
     List<String> decomposedQuery = new ArrayList<>();
     sqlQuery = sqlQuery.replace(";", "");
