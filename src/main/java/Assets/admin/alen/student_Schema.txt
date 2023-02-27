@@ -1,0 +1,1 @@
+studentName-varchar-StudentRoll-int-StudentAddress-varchar-DB_User-admin
