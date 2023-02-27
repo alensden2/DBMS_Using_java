@@ -31,6 +31,11 @@ public class Login {
   List<UserAuthenticationDto> userAuthenticationDetails = new ArrayList<>();
   File file = new File("src/main/java/Assets/userAuth.txt");
   Path filePath = Path.of("src/main/java/Assets/userAuth.txt");
+
+  public UserAuthenticationDto getCurrentUserDetails() {
+    return currentUserDetails;
+  }
+
   UserAuthenticationDto currentUserDetails = new UserAuthenticationDto();
   String fileContent;
 
