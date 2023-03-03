@@ -264,7 +264,29 @@ public class Query {
    * @param sqlCommand
    * @param username
    */
-  public void updateTable(String sqlCommand, String username) {}
+  public void updateTable(String sqlCommand, String username) {
+    if (currentUsedDatabase == null) {
+      QueryCleaner queryCleaner = new QueryCleaner();
+      List<String> decomposedQuery = queryCleaner.queryDecomposer(
+              sqlCommand,
+              username
+      );
+      ReadWriteToDatabase readWriteToDatabase = new ReadWriteToDatabase();
+      String nameOfTable = queryCleaner.getTableName();
+      readWriteToDatabase.deleteTableFromQuery(
+              nameOfTable,
+              decomposedQuery,
+              username,
+              currentUsedDatabase
+      );
+      AdminConsole adminConsole = new AdminConsole(username);
+      adminConsole.AdminTEMP();
+    } else {
+      System.out.println("Updated ...");
+      AdminConsole adminConsole = new AdminConsole(username);
+      adminConsole.AdminTEMP();
+    }
+  }
 
   /**
    * This function is used to delete a table from the database

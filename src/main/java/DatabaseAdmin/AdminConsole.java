@@ -53,7 +53,7 @@ public class AdminConsole {
       "To insert into a table -> Eg : \'insert into orders values ( 1234, 23/oct/2023, Alen-order, $34000 );\' NOTE - All the columns are dynamic. Eg : don't use \" \" for varchar "
     );
     System.out.println(
-      "To update table -> Eg : \'update table orders ( 1234, 23/oct/2023, Alen-order, $34000 );\'"
+      "To update table -> Eg : \'update the table orders ( 1234, 23/oct/2023, Alen-order, $34000 );\'"
     );
     System.out.println("To delete table -> Eg : \'delete table orders;\'");
     System.out.println(
